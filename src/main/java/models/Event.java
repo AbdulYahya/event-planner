@@ -27,20 +27,41 @@ public class Event {
     public List<String> getListFoodChoices() {
         return listFoodChoices;
     }
+
     public List<String> getListBeverageChoices() {
         return listBeverageChoices;
     }
+
     public List<String> getListEntertainmentChoices() {
         return listEntertainmentChoices;
     }
+
     public int getIntNumberOfGuests() {
         return intNumberOfGuests;
     }
+
     // Setter Methods
 //    public void setHashMapEventPrompts() {
 //        int intNumberOfGuests;
 //
 //        hashMapEventPrompts.put("How many guests will be attending?", intNumberOfGuests);
 //    }
+
+
+    public void setListFoodChoices(List<String> listFoodChoices) {
+        this.listFoodChoices = null;
+    }
+
+    public void setListBeverageChoices(List<String> listBeverageChoices) {
+        this.listBeverageChoices = null;
+    }
+
+    public void setListEntertainmentChoices(List<String> listEntertainmentChoices) {
+        this.listEntertainmentChoices = null;
+    }
+
+    public void setIntNumberOfGuests(int intNumberOfGuests) {
+        this.intNumberOfGuests = 0;
+    }
 }
 
