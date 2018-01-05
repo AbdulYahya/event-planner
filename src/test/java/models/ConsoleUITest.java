@@ -32,6 +32,6 @@ public class ConsoleUITest {
 
         ConsoleUI testConsole = new ConsoleUI();
         testConsole.invalidResponse();
-        assertEquals("test", outContent.toString());
+        assertEquals("Sorry we didn't quite catch that. Please try again!\n", outContent.toString());
     }
 }
