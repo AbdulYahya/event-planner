@@ -22,6 +22,6 @@ public class EventTest {
         testEntertainmentChoices.add("Clown");
 
         Event testEvent = new Event(10, testFoodChoices, testBeverageChoices, testEntertainmentChoices);
-        assertEquals(false, testEvent instanceof Event);
+        assertEquals(true, testEvent instanceof Event);
     }
 }
