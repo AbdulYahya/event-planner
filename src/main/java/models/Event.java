@@ -11,6 +11,7 @@ public class Event {
     private List<String> listBeverageChoices;
     private List<String> listEntertainmentChoices;
     private int intNumberOfGuests;
+    private enum enumCoupons { oneFreeEntertainmentChoice, fifteenPercentDiscount };
 
     public Event(int intNumberOfGuests, List<String> listFoodChoices, List<String> listBeverageChoices, List<String> listEntertainmentChoices) {
 //        this.hashMapEventPrompts = new HashMap<>();
@@ -40,13 +41,13 @@ public class Event {
         return intNumberOfGuests;
     }
 
+
     // Setter Methods
 //    public void setHashMapEventPrompts() {
 //        int intNumberOfGuests;
 //
 //        hashMapEventPrompts.put("How many guests will be attending?", intNumberOfGuests);
 //    }
-
 
     public void setListFoodChoices(List<String> listFoodChoices) {
         this.listFoodChoices = listFoodChoices;
