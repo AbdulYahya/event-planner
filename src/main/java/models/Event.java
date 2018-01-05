@@ -49,19 +49,19 @@ public class Event {
 
 
     public void setListFoodChoices(List<String> listFoodChoices) {
-        this.listFoodChoices = null;
+        this.listFoodChoices = listFoodChoices;
     }
 
     public void setListBeverageChoices(List<String> listBeverageChoices) {
-        this.listBeverageChoices = null;
+        this.listBeverageChoices = listBeverageChoices;
     }
 
     public void setListEntertainmentChoices(List<String> listEntertainmentChoices) {
-        this.listEntertainmentChoices = null;
+        this.listEntertainmentChoices = listEntertainmentChoices;
     }
 
     public void setIntNumberOfGuests(int intNumberOfGuests) {
-        this.intNumberOfGuests = 0;
+        this.intNumberOfGuests = intNumberOfGuests;
     }
 }
 
