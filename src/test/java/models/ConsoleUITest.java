@@ -56,7 +56,7 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "Hip hip hoooray! Congratulations to the newly wed!";
+        String expected = "Hip hip hoooray! Congratulations to the newly wed!\n";
 
         testConsole.weddingPrompt();
         assertEquals(expected, outContent.toString());
@@ -67,7 +67,7 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "Happy birthday to the intended recipient of this event!";
+        String expected = "Happy birthday to the intended recipient of this event!\n";
 
         testConsole.birthdayPrompt();
         assertEquals(expected, outContent.toString());
@@ -78,7 +78,7 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!";
+        String expected = "We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!\n";
 
         testConsole.reunionPrompt();
         assertEquals(expected, outContent.toString());
@@ -89,7 +89,7 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "So, none of the above exactly fits your needs. No worries! We got you covered!";
+        String expected = "So, none of the above exactly fits your needs. No worries! We got you covered!\n";
 
         testConsole.otherPrompt();
         assertEquals(expected, outContent.toString());
