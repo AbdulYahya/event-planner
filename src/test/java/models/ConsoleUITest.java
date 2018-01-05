@@ -8,6 +8,6 @@ public class ConsoleUITest {
     @Test
     public void newConsoleUI_instantiatesCorrectly() {
         ConsoleUI testConsole = new ConsoleUI();
-        assertEquals(false, testConsole instanceof ConsoleUI);
+        assertEquals(true, testConsole instanceof ConsoleUI);
     }
 }
