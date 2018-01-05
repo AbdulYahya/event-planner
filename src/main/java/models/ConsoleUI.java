@@ -15,5 +15,14 @@ public class ConsoleUI {
         displayPrompt("Sorry we didn't quite catch that. Please try again!");
     }
 
-
+    // Start Menu
+    public void startMenuPrompt() {
+        displayPrompt("Welcome to Abdul's Event planner! What would you like to plan?");
+        displayPrompt("--------------------------------------------------------------");
+        displayPrompt("1) Wedding");
+        displayPrompt("2) Birthday");
+        displayPrompt("3) Reunion");
+        displayPrompt("4) Other");
+        displayPrompt("5) Quit");
+    }
 }
