@@ -25,4 +25,25 @@ public class ConsoleUI {
         displayPrompt("4) Other");
         displayPrompt("5) Quit");
     }
+
+    // Menu Selection Prompts
+    public void weddingPrompt() {
+        displayPrompt("Hip hip hoooray! Congratulations to the newly wed!");
+
+    }
+
+    public void birthdayPrompt() {
+        displayPrompt("Happy birthday to the intended recipient of this event!");
+
+    }
+
+    public void reunionPrompt() {
+        displayPrompt("We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!");
+
+    }
+    public void otherPrompt() {
+        displayPrompt("So, none of the above exactly fits your needs. No worries! We got you covered!");
+
+    }
+
 }
