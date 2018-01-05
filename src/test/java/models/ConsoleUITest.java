@@ -23,6 +23,6 @@ public class ConsoleUITest {
 
         ConsoleUI testConsole = new ConsoleUI();
         testConsole.displayPrompt("Hello");
-        assertEquals("Hello", outContent.toString());
+        assertEquals("Hello\n", outContent.toString());
     }
 }
