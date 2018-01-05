@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Map;
 
 public class Event {
-    private Map<String, String> hashMapEventPrompts;
+//    private Map<String, String> hashMapEventPrompts;
     private List<String> listFoodChoices;
     private List<String> listBeverageChoices;
     private List<String> listEntertainmentChoices;
     private int intNumberOfGuests;
 
     public Event(int intNumberOfGuests, List<String> listFoodChoices, List<String> listBeverageChoices, List<String> listEntertainmentChoices) {
-        this.hashMapEventPrompts = new HashMap<>();
+//        this.hashMapEventPrompts = new HashMap<>();
         this.intNumberOfGuests = intNumberOfGuests;
         this.listFoodChoices = listFoodChoices;
         this.listBeverageChoices = listBeverageChoices;
@@ -21,22 +21,26 @@ public class Event {
     }
 
     // Getter Methods
-    public Map<String, String> getHashMapEventPrompts() {
-        return null;
-    }
+//    public Map<String, String> getHashMapEventPrompts() {
+//        return hashMapEventPrompts;
+//    }
     public List<String> getListFoodChoices() {
-        return null;
+        return listFoodChoices;
     }
     public List<String> getListBeverageChoices() {
-        return null;
+        return listBeverageChoices;
     }
     public List<String> getListEntertainmentChoices() {
-        return null;
+        return listEntertainmentChoices;
     }
     public int getIntNumberOfGuests() {
-        return 0;
+        return intNumberOfGuests;
     }
     // Setter Methods
-
+//    public void setHashMapEventPrompts() {
+//        int intNumberOfGuests;
+//
+//        hashMapEventPrompts.put("How many guests will be attending?", intNumberOfGuests);
+//    }
 }
 
