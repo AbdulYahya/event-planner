@@ -43,7 +43,7 @@ public class ConsoleUITest {
 
         ConsoleUI testConsole = new ConsoleUI();
         testConsole.startMenuPrompt();
-        String expected = "Welcome to Abdul's Event planner! What would you like to plan?\n " +
+        String expected = "Welcome to Abdul's Event planner! What would you like to plan?\n" +
                 "--------------------------------------------------------------\n" +
                 "1) Wedding\n" +
                 "2) Birthday\n" +
