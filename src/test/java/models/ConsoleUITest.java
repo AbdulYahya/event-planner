@@ -25,4 +25,13 @@ public class ConsoleUITest {
         testConsole.displayPrompt("Hello");
         assertEquals("Hello\n", outContent.toString());
     }
+    @Test
+    public void invalidResponse_displaysInvalidResponse_String() throws Exception {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        ConsoleUI testConsole = new ConsoleUI();
+        testConsole.invalidResponse();
+        assertEquals("test", outContent.toString());
+    }
 }

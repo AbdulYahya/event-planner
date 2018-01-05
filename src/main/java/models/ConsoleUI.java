@@ -10,4 +10,10 @@ public class ConsoleUI {
         System.out.println(stringPrompt);
     }
 
+    // Display this message if the user's input was an invalid response?
+    public void invalidResponse() {
+        displayPrompt("Sorry we didn't quite catch that. Please try again!");
+    }
+
+
 }
