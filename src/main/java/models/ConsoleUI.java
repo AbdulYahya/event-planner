@@ -11,7 +11,7 @@ public class ConsoleUI {
     private List<String> listBeverageChoices = new ArrayList<>();
     private List<String> listEntertainmentChoices = new ArrayList<>();
     private int intNumberOfGuests;
-    public Event event = new Event(intNumberOfGuests, listFoodChoices, listBeverageChoices, listEntertainmentChoices);
+    private Event event = new Event(intNumberOfGuests, listFoodChoices, listBeverageChoices, listEntertainmentChoices);
 
     // Display the prompt to the user
     public void displayPrompt(String stringPrompt) {
@@ -47,6 +47,7 @@ public class ConsoleUI {
         displayPrompt("We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!");
 
     }
+
     public void otherPrompt() throws IOException {
         int amountOfFoodChoices;
         int amountOfBeverageChoices;
@@ -55,32 +56,49 @@ public class ConsoleUI {
         displayPrompt("So, none of the above exactly fits your needs. No worries! We got you covered!");
         displayPrompt("--------------------------------------------------------------");
 
-        // Gather data required by our Event class
+        // Gather Number of guests required by our Event class
         //    Ex.  Event event = new Event(int, List<String>, List<String>, List<String>)
         displayPrompt("How many guests are you expecting?");
         intNumberOfGuests = Integer.parseInt(getUserInput());
 
+        // Gather a list of Foods or Entrees required by our Event class
+        //    Ex.  Event event = new Event(int, List<String>, List<String>, List<String>)
         displayPrompt("How many different entrees would you like to have served?");
         amountOfFoodChoices = Integer.parseInt(getUserInput());
-        for (int counter = 1; counter <= amountOfFoodChoices; counter++) {
-            displayPrompt("What will Entree #" + counter +  " be?");
-            listFoodChoices.add(getUserInput());
+        if (amountOfFoodChoices > 0) {
+            for (int counter = 1; counter <= amountOfFoodChoices; counter++) {
+                displayPrompt("What will Entree #" + counter +  " be?");
+                listFoodChoices.add(getUserInput());
+            }
+        } else {
+            displayPrompt("No Food at this event? Well okay, if you say so...");
         }
 
+        // Gather a list of beverages required by our Event class
+        //    Ex.  Event event = new Event(int, List<String>, List<String>, List<String>)
         displayPrompt("How many different beverages would you like to have served?");
         amountOfBeverageChoices = Integer.parseInt(getUserInput());
-        for (int counter = 1; counter <= amountOfBeverageChoices; counter++) {
-            displayPrompt("What will beverage #" + counter +  " be?");
-            listBeverageChoices.add(getUserInput());
+        if (amountOfBeverageChoices > 0) {
+            for (int counter = 1; counter <= amountOfBeverageChoices; counter++) {
+                displayPrompt("What will beverage #" + counter +  " be?");
+                listBeverageChoices.add(getUserInput());
+            }
+        } else {
+            displayPrompt("No beverages at this event? Well okay, if you say so...");
         }
 
+        // Gather a list of entertainments/entertainers required by our Event class
+        //    Ex.  Event event = new Event(int, List<String>, List<String>, List<String>)
         displayPrompt("Here at Abdul's event planners, we promise to deliver whatever and however many, entertainments you want or your money back!");
         displayPrompt("How many entertainments/entertainers would you like at your event?");
         amountOfEntertainmentChoices = Integer.parseInt(getUserInput());
-
-        for (int counter = 1; counter <= amountOfEntertainmentChoices; counter++) {
-            displayPrompt("What/who will entertainment/entertainer #" + counter +  " be?");
-            listEntertainmentChoices.add(getUserInput());
+        if (amountOfEntertainmentChoices > 0) {
+            for (int counter = 1; counter <= amountOfEntertainmentChoices; counter++) {
+                displayPrompt("What/who will entertainment/entertainer #" + counter +  " be?");
+                listEntertainmentChoices.add(getUserInput());
+            }
+        } else {
+            displayPrompt("No entertainment/entertainer at this event? Well okay, if you say so...");
         }
 
         // Call our Event class instance we instantiated above
@@ -90,10 +108,21 @@ public class ConsoleUI {
         event.setListBeverageChoices(listBeverageChoices);
         event.setListEntertainmentChoices(listEntertainmentChoices);
 
-        System.out.println(event.getListFoodChoices());
+        // Test to make sure all event data was set successfully
+        System.out.println(event.getListFoodChoices().size());
         System.out.println(event.getListBeverageChoices());
         System.out.println(event.getListEntertainmentChoices());
     }
+
+//    public int calculateEventCost() {
+//        int totalCost = -1;
+//
+//        if (event.getListFoodChoices().size() == 1) {
+//            totalCost += 100;
+//        } else if (event.getListFoodChoices().size())
+//
+//        return totalCost;
+//    }
 
     // Getter Methods
     public String getUserInput() throws IOException {
