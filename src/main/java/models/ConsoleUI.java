@@ -108,17 +108,30 @@ public class ConsoleUI {
         event.setListFoodChoices(listFoodChoices);
         event.setListBeverageChoices(listBeverageChoices);
         event.setListEntertainmentChoices(listEntertainmentChoices);
+        displayPrompt("--------------------------------------------------------------");
+        displayPrompt("Your total for this event is: $" + calculateEventCost());
     }
 
-//    public int calculateEventCost() {
-//        int totalCost = -1;
-//
-//        if (event.getListFoodChoices().size() == 1) {
-//            totalCost += 100;
-//        } else if (event.getListFoodChoices().size())
-//
-//        return totalCost;
-//    }
+    public int calculateEventCost() {
+        int totalCost = 0;
+
+        if (event.getListFoodChoices().size() == 1) {
+            if (event.getIntNumberOfGuests() == 1) {
+                totalCost += 100;
+            } else if (event.getIntNumberOfGuests() > 1 && event.getIntNumberOfGuests() <= 150) {
+               // $5 discount per guest
+                totalCost += 95 * event.getIntNumberOfGuests();
+            }
+        } else if (event.getListFoodChoices().size() > 1 && event.getListFoodChoices().size() < 10) {
+            if (event.getIntNumberOfGuests() == 1) {
+                totalCost += 100;
+            } else if (event.getIntNumberOfGuests() > 1 && event.getIntNumberOfGuests() <= 150) {
+                // $5 discount per guest
+                totalCost += 95 * event.getIntNumberOfGuests();
+            }
+        }
+        return totalCost;
+    }
 
     // Getter Methods
     public String getUserInput() throws IOException {

@@ -13,15 +13,15 @@ public class App {
             int selection = console.getStartMenuPromptInput();
 
             switch (selection) {
-                case 1:
-                    console.weddingPrompt();
-                    break;
-                case 2:
-                    console.birthdayPrompt();
-                    break;
-                case 3:
-                    console.reunionPrompt();
-                    break;
+//                case 1:
+//                    console.weddingPrompt();
+//                    break;
+//                case 2:
+//                    console.birthdayPrompt();
+//                    break;
+//                case 3:
+//                    console.reunionPrompt();
+//                    break;
                 case 4:
                     console.otherPrompt();
                     break;
