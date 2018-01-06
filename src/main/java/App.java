@@ -1,13 +1,10 @@
 import models.*;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws IOException {
         ConsoleUI console = new ConsoleUI();
-        List<String> listFoodChoices = new ArrayList<>();
         boolean quit = false;
 
         console.startMenuPrompt();

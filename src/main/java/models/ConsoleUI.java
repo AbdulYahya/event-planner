@@ -11,6 +11,7 @@ public class ConsoleUI {
     private List<String> listBeverageChoices = new ArrayList<>();
     private List<String> listEntertainmentChoices = new ArrayList<>();
     private int intNumberOfGuests;
+    // Instantiate an instance of our Event class
     private Event event = new Event(intNumberOfGuests, listFoodChoices, listBeverageChoices, listEntertainmentChoices);
 
     // Display the prompt to the user
@@ -107,11 +108,6 @@ public class ConsoleUI {
         event.setListFoodChoices(listFoodChoices);
         event.setListBeverageChoices(listBeverageChoices);
         event.setListEntertainmentChoices(listEntertainmentChoices);
-
-        // Test to make sure all event data was set successfully
-        System.out.println(event.getListFoodChoices().size());
-        System.out.println(event.getListBeverageChoices());
-        System.out.println(event.getListEntertainmentChoices());
     }
 
 //    public int calculateEventCost() {
