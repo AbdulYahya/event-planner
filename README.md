@@ -1,6 +1,5 @@
 # Event Planner
 
-## Description
 This program offers an all-inclusive event planning service. Users are prompted for information about the event they're wanting to plan. The program then evaluates that information to calculate an estimated cost.
 
 
