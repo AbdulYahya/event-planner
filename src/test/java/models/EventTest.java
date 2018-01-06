@@ -30,7 +30,7 @@ public class EventTest {
         List<String> testEntertainmentChoices = new ArrayList<>();
 
         Event testEvent = new Event(10, testFoodChoices, testBeverageChoices, testEntertainmentChoices);
-        assertEquals(33, testEvent.getDiscountCoupon(50, 30), 0);
+        assertEquals(35, testEvent.getDiscountCoupon(50, 30), 0);
 
     }
 

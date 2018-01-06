@@ -12,6 +12,7 @@ public class Event {
         this.intNumberOfGuests = intNumberOfGuests;
         this.listFoodChoices = listFoodChoices;
         this.listBeverageChoices = listBeverageChoices;
+        this.listEntertainmentChoices = listEntertainmentChoices;
     }
 
     public double getDiscountCoupon(double markedPrice, double discountPercentage) {
