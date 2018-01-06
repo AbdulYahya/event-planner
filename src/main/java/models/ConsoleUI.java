@@ -90,7 +90,7 @@ public class ConsoleUI {
                 displayPrompt("No entertainment/entertainer at this event? Well okay, if you say so...");
             }
 
-            printStringReceipt();
+            printReceipt();
 
         } else {
             displayPrompt("Can't have an event with no guests....");
@@ -101,7 +101,7 @@ public class ConsoleUI {
         System.exit(-1);
     }
 
-    private void printStringReceipt() {
+    private void printReceipt() {
         event.setIntNumberOfGuests(intNumberOfGuests);
         event.setListFoodChoices(listFoodChoices);
         event.setListBeverageChoices(listBeverageChoices);
