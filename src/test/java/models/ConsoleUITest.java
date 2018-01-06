@@ -3,7 +3,9 @@ package models;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 
 public class ConsoleUITest {
@@ -93,5 +95,26 @@ public class ConsoleUITest {
 
         testConsole.otherPrompt();
         assertEquals(expected, outContent.toString());
+    }
+
+    // Getter Methods
+    @Test
+    public void getUserInput_getsUserInput_String() throws Exception {
+        ConsoleUI testConsole = new ConsoleUI();
+        String expected = "Hello World";
+        InputStream inContent = new ByteArrayInputStream(expected.getBytes());
+        System.setIn(inContent);
+
+        assertEquals("hello", testConsole.getUserInput());
+    }
+
+    @Test
+    public void getStartMenuPromptInput_getsStartMenuPromptInput_int() throws Exception {
+        ConsoleUI testConsole = new ConsoleUI();
+        String expected = "10";
+        InputStream inContent = new ByteArrayInputStream(expected.getBytes());
+        System.setIn(inContent);
+
+        assertEquals(1, testConsole.getStartMenuPromptInput());
     }
 }

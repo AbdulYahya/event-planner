@@ -29,12 +29,10 @@ public class ConsoleUI {
     // Menu Selection Prompts
     public void weddingPrompt() {
         displayPrompt("Hip hip hoooray! Congratulations to the newly wed!");
-
     }
 
     public void birthdayPrompt() {
         displayPrompt("Happy birthday to the intended recipient of this event!");
-
     }
 
     public void reunionPrompt() {
@@ -43,7 +41,27 @@ public class ConsoleUI {
     }
     public void otherPrompt() {
         displayPrompt("So, none of the above exactly fits your needs. No worries! We got you covered!");
-
     }
 
+    // Getter Methods
+    public String getUserInput() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        return reader.readLine();
+    }
+
+    public int getStartMenuPromptInput() throws IOException {
+        boolean validInput = false;
+        int userInput = -1;
+
+        while (!validInput) {
+            try {
+                validInput = true;
+                userInput = Integer.parseInt(getUserInput());
+            } catch (NumberFormatException e) {
+                invalidResponse();
+                validInput = false;
+            }
+        }
+        return userInput;
+    }
 }
