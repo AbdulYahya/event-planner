@@ -105,7 +105,7 @@ public class ConsoleUITest {
         InputStream inContent = new ByteArrayInputStream(expected.getBytes());
         System.setIn(inContent);
 
-        assertEquals("hello", testConsole.getUserInput());
+        assertEquals(expected, testConsole.getUserInput());
     }
 
     @Test
@@ -115,6 +115,6 @@ public class ConsoleUITest {
         InputStream inContent = new ByteArrayInputStream(expected.getBytes());
         System.setIn(inContent);
 
-        assertEquals(1, testConsole.getStartMenuPromptInput());
+        assertEquals(10, testConsole.getStartMenuPromptInput());
     }
 }
