@@ -24,6 +24,17 @@ public class EventTest {
     }
 
     @Test
+    public void getDiscountCoupon_getsDiscountCoupon_double() throws Exception {
+        List<String> testFoodChoices = new ArrayList<>();
+        List<String> testBeverageChoices = new ArrayList<>();
+        List<String> testEntertainmentChoices = new ArrayList<>();
+
+        Event testEvent = new Event(10, testFoodChoices, testBeverageChoices, testEntertainmentChoices);
+        assertEquals(33, testEvent.getDiscountCoupon(50, 30), 0);
+
+    }
+
+    @Test
     public void getListFoodChoices_getsListFoodChoices_ArrayList() throws Exception {
         List<String> testFoodChoices = new ArrayList<>();
         List<String> testBeverageChoices = new ArrayList<>();
@@ -174,4 +185,5 @@ public class EventTest {
         testEvent.setIntNumberOfGuests(listExpected);
         assertEquals(listExpected, testEvent.getIntNumberOfGuests());
     }
+
 }

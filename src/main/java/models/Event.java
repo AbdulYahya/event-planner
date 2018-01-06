@@ -7,13 +7,16 @@ public class Event {
     private List<String> listBeverageChoices;
     private List<String> listEntertainmentChoices;
     private int intNumberOfGuests;
-    private enum enumCoupons { oneFreeEntertainmentChoice, fifteenPercentDiscount };
 
     public Event(int intNumberOfGuests, List<String> listFoodChoices, List<String> listBeverageChoices, List<String> listEntertainmentChoices) {
         this.intNumberOfGuests = intNumberOfGuests;
         this.listFoodChoices = listFoodChoices;
         this.listBeverageChoices = listBeverageChoices;
-        this.listEntertainmentChoices = listEntertainmentChoices;
+    }
+
+    public double getDiscountCoupon(double markedPrice, double discountPercentage) {
+        double hold = 100 - discountPercentage;
+        return (hold * markedPrice) / 100;
     }
 
     // Getter Methods

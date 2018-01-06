@@ -8,31 +8,27 @@ public class App {
         boolean quit = false;
 
         console.startMenuPrompt();
-
         while (!quit) {
             int selection = console.getStartMenuPromptInput();
 
             switch (selection) {
-//                case 1:
-//                    console.weddingPrompt();
-//                    break;
-//                case 2:
-//                    console.birthdayPrompt();
-//                    break;
-//                case 3:
-//                    console.reunionPrompt();
-//                    break;
-                case 4:
-                    console.otherPrompt();
+                case 1:
+                    try {
+                        console.otherPrompt();
+                    } catch (NumberFormatException e) {
+                        console.invalidResponse();
+                        console.otherPrompt();
+                    }
                     break;
-                case 5:
+                case 2:
+                    console.displayPrompt("Thank you for visiting us at Abdul's Event Planner");
+                    console.displayPrompt("Goodbye.");
                     quit = true;
                     break;
                 default:
-                    console.displayPrompt("What?");
+                    console.invalidResponse();
                     break;
             }
         }
-
     }
 }
