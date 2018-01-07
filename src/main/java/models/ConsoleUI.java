@@ -26,24 +26,38 @@ public class ConsoleUI {
     public void startMenuPrompt() {
         displayPrompt("Welcome to Abdul's Event planner! What would you like to plan?");
         displayPrompt("--------------------------------------------------------------");
-//        displayPrompt("1) Wedding");
-//        displayPrompt("2) Birthday");
-//        displayPrompt("3) Reunion");
-        displayPrompt("1) Other");
-        displayPrompt("2) Quit");
+        displayPrompt("1) Wedding");
+        displayPrompt("2) Birthday");
+        displayPrompt("3) Reunion");
+        displayPrompt("4) Custom");
+        displayPrompt("5) Quit");
     }
 
     public void weddingPrompt() {
+        displayPrompt("--------------------------------------------------------------");
         displayPrompt("Hip hip hoooray! Congratulations to the newly wed!");
+        displayPrompt("Sorry! This service is coming soon! Please try again tomorrow.");
+        displayPrompt("--------------------------------------------------------------");
+        displayPrompt("");
+        startMenuPrompt();
     }
 
     public void birthdayPrompt() {
+        displayPrompt("--------------------------------------------------------------");
         displayPrompt("Happy birthday to the intended recipient of this event!");
+        displayPrompt("Sorry! This service is coming soon! Please try again tomorrow.");
+        displayPrompt("--------------------------------------------------------------");
+        displayPrompt("");
+        startMenuPrompt();
     }
 
     public void reunionPrompt() {
+        displayPrompt("--------------------------------------------------------------");
         displayPrompt("We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!");
-    }
+        displayPrompt("Sorry! This service is coming soon! Please try again tomorrow.");
+        displayPrompt("--------------------------------------------------------------");
+        displayPrompt("");
+        startMenuPrompt();}
 
     public void otherPrompt() throws IOException {
         int amountOfFoodChoices;
@@ -117,13 +131,13 @@ public class ConsoleUI {
                 displayPrompt("30% off Guest fee! - Original price per guest: $50 **Discounted price per guest: $35**");
             }
             if (listFoodChoices.size() >= 5) {
-                displayPrompt("15% off all Entrees! - Original price per guest: $900 **Discounted price per guest: $765**");
+                displayPrompt("15% off all Entrees! - Original price per entree: $900 **Discounted price per entree: $765**");
             }
             if (listBeverageChoices.size() >= 5) {
-                displayPrompt("15% off all Beverages! - Original price per guest: $700 **Discounted price per guest: $595**");
+                displayPrompt("15% off all Beverages! - Original price per beverage: $700 **Discounted price per beverage: $595**");
             }
             if (listEntertainmentChoices.size() >= 3) {
-                displayPrompt("10% off all Entertainments/Entertainers! - Original price per guest: $1500 **Discounted price per guest: $1350**");
+                displayPrompt("10% off all Entertainments/Entertainers! - Original price per entertainment/er: $1500 **Discounted price per entertainment/er: $1350**");
             }
 
             displayPrompt("+++++++++++++++++++++++++++++++++++++\n");
