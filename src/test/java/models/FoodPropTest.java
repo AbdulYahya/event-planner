@@ -22,6 +22,14 @@ public class FoodPropTest {
         assertTrue(testFoodProp instanceof FoodProp);
     }
 
+    // Getter Method Tests
+    @Test
+    public void getArrayListSelection_getsArrayListSelection_ArrayList() throws Exception {
+        FoodProp testFoodProp = new FoodProp(10, arrayListFoodChoices);
+        assertEquals(null, testFoodProp.getArrayListSelection());
+    }
+
+    // Setter Method Tests
     @Test
     public void setArrayListFoodSelection_setsArrayListFoodSelection_ArrayList() throws Exception {
         FoodProp testFoodProp = new FoodProp(10, arrayListFoodChoices);
