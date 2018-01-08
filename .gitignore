@@ -40,7 +40,7 @@ build/
 gradle/
 gradlew*
 settings.gradle
-
+out/
 # IntelliJ #
 ############
 .idea

@@ -18,11 +18,18 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
+        // Planner Route
         get("/planner", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "planner.hbs");
         }, new HandlebarsTemplateEngine());
-
+        // Created Event Route
+        get("/event", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String fName = request.queryParams("fName");
+            model.put("fName", fName);
+            return new ModelAndView(model, "event.hbs");
+        }, new HandlebarsTemplateEngine());
 
 //        ConsoleUI console = new ConsoleUI();
 //        boolean quit = false;

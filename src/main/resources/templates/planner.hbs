@@ -3,7 +3,22 @@
 {{/partial}}
 
 {{#partial "main"}}
-    <h1>Planner</h1>
+    <div class="jumbotron">
+        <h1 class="display-3"></h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <div class="card">
+          <div class="card-body">
+            <form action="/event">
+              <div class="form-group">
+                <h4 class="text-left pb-3">Your Name</h4>
+                <input id="fName" name="fName" class="form-control" placeholder="Full Name">
+              </div>
+              <button type="submit" class="btn btn-secondary">Create</button>
+            </form>
+          </div>
+        </div>
+
+    </div>
 {{/partial}}
 
 {{> layout.hbs}}
