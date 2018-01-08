@@ -19,7 +19,7 @@ public class FoodPropTest {
     @Test
     public void newFoodProp_InstantiatesCorrectly() throws Exception {
         FoodProp testFoodProp = new FoodProp(10, arrayListFoodChoices);
-        assertFalse(testFoodProp instanceof FoodProp);
+        assertTrue(testFoodProp instanceof FoodProp);
     }
 
     @Test
@@ -28,6 +28,6 @@ public class FoodPropTest {
 
         testFoodProp.setArrayListSelection("Pizza");
         testFoodProp.setArrayListSelection("Cake");
-        assertEquals(null, testFoodProp.getArrayListSelection());
+        assertEquals(arrayListFoodChoices, testFoodProp.getArrayListSelection());
     }
 }
