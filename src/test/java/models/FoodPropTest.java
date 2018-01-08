@@ -26,7 +26,7 @@ public class FoodPropTest {
     @Test
     public void getArrayListSelection_getsArrayListSelection_ArrayList() throws Exception {
         FoodProp testFoodProp = new FoodProp(10, arrayListFoodChoices);
-        assertEquals(null, testFoodProp.getArrayListSelection());
+        assertEquals(arrayListFoodChoices, testFoodProp.getArrayListSelection());
     }
 
     // Setter Method Tests
