@@ -1,0 +1,102 @@
+{{#partial "main"}}
+  <div class="row">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="text-left pb-3">Event Planned by <span class="text-muted">{{ fName }}</span></h4>
+          <!-- Event Type/Entrees Row BEGIN -->
+          <div class="row">
+            <!-- Event Type Col BEGIN-->
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="font-weight-light">Event Type</p>
+                  <h4><span class="badge badge-primary">{{ eventType }}</span></h4>
+                </div>
+              </div>
+            </div>
+            <!-- Event Type Col END -->
+            <!-- Entrees Col BEGIN -->
+            <div class="col-9">
+              <div class="card">
+                <div class="card-body">
+                  <p class="font-weight-light">Entrees</p>
+                  Testing..............................
+                </div>
+              </div>
+            </div>
+            <!-- Entrees Col END -->
+          </div>
+          <!-- Event Type/Entrees Row END -->
+          <!-- Guests Attending/Beverages Row BEGIN -->
+          <div class="row">
+            <!-- Attending col BEGIN -->
+            <div class="col-3">
+              <div class="card mt-3">
+                <div class="card-body text-center">
+                  <p class="font-weight-light">Attending</p>
+                  <h4><span class="badge badge-primary">{{ gQuantity }}</span></h4>
+                </div>
+              </div>
+            </div>
+            <!-- Attending Col END -->
+            <!-- Beverages Col BEGIN -->
+            <div class="col-9">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <p class="font-weight-light">Beverages</p>
+                  Testing..............................
+                </div>
+              </div>
+            </div>
+            <!-- Beverages Col END -->
+          </div>
+          <!-- Guests Attending/Beverages Row END -->
+          <!-- Date/Entertainment Row BEGIN -->
+          <div class="row">
+            <!-- Event Date Col BEGIN -->
+            <div class="col-3">
+              <div class="card mt-3">
+                <div class="card-body text-center">
+                  <p class="font-weight-light">Event Date</p>
+                  <h4><span class="badge badge-primary">{{ eDate }}</span></h4>
+                </div>
+              </div>
+            </div>
+            <!-- Event Date Col END -->
+            <!-- Entertainment Col BEGIN -->
+            <div class="col-9">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <p class="font-weight-light">Entertainment</p>
+                  Testing..............................
+                </div>
+              </div>
+            </div>
+            <!-- Entertainment Col END -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <h4 class="card-header">Confirmation</h4>
+        <div class="card-body">
+          <form action="/event-confirmed">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="applyCoupon"></label>
+                <input id="applyCoupon" name="applyCoupon" class="form-control mb-2" placeholder="15OFF" />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn-sm btn-info mb-2">Apply</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/partial}}
+
+{{> layout.hbs}}

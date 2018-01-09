@@ -1,8 +1,14 @@
 import models.*;
 
 import spark.ModelAndView;
+import spark.Request;
+import spark.Response;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,21 +20,42 @@ public class App {
         staticFileLocation("/public");
 
         // Root Route
-        get("/", (request, response) -> {
+        get("/", (Request request, Response response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
         // Planner Route
-        get("/planner", (request, response) -> {
+        get("/planner", (Request request, Response response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "planner.hbs");
         }, new HandlebarsTemplateEngine());
         // Created Event Route
-        get("/event", (request, response) -> {
+        get("/event-confirmation", (Request request, Response response) -> {
             Map<String, Object> model = new HashMap<>();
             String fName = request.queryParams("fName");
+            String gQuantity = request.queryParams("gQuantity");
+            String eventType = request.queryParams("eventType");
+            String eDate = request.queryParams("eDate");
+            String eventPropEntrees = request.queryParams("eventPropEntrees");
+            String[] arrayEventPropEntrees = eventPropEntrees.split(", ");
+
+            // Testing
+            for (String word : arrayEventPropEntrees) {
+                System.out.print(word + " ");
+            }
+            System.out.println("\n" + arrayEventPropEntrees.length);
+//            Date eventDate;
+//            DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+//            eventDate = df.parse(eDate);
+//            SimpleDateFormat ft = new SimpleDateFormat("E, MMMM d");
+
+
+
             model.put("fName", fName);
-            return new ModelAndView(model, "event.hbs");
+            model.put("eDate", eDate);
+            model.put("gQuantity", gQuantity);
+            model.put("eventType", eventType);
+            return new ModelAndView(model, "event-confirmation.hbs");
         }, new HandlebarsTemplateEngine());
 
 //        ConsoleUI console = new ConsoleUI();

@@ -8,10 +8,53 @@
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <div class="card">
           <div class="card-body">
-            <form action="/event">
-              <div class="form-group">
-                <h4 class="text-left pb-3">Your Name</h4>
-                <input id="fName" name="fName" class="form-control" placeholder="Full Name">
+            <form action="/event-confirmation">
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <h4 class="text-left pb-3">Your Name</h4>
+                    <input id="fName" name="fName" class="form-control" placeholder="e.g., Samwise Gamgee" type="text"/>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <h4 class="text-left pb-3">Date of the Event</h4>
+                    <input id="eDate" name="eDate" class="form-control" type="date" />
+                  </div>
+                </div>
+              </div>
+              <!-- Name/Date row END-->
+              <!-- Event Type/# of Guests row BEGIN -->
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <h4 class="text-left pb-3">Event Type</h4>
+                    <select id="eventType" name="eventType" class="form-control">
+                      <option selected>Choose...</option>
+                      <option value="Birthday">Birthday</option>
+                      <option value="Reunion">Reunion</option>
+                      <option value="Wedding">Wedding</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <h4 class="text-left pb-3">How many guests?</h4>
+                    <input id="gQuantity" name="gQuantity" class="form-control" placeholder="150" type="number"/>
+                  </div>
+                </div>
+              </div>
+              <!-- Event Type/# of Guests END -->
+              <!-- Emtrees Row BEGIN -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <h4 class="text-left pb-3">Entrees</h4>
+                    <input id="eventPropEntrees" name="eventPropEntrees" class="form-control" placeholder="Separate Entrees w/ a comma e.g., cake, lasagna, cookies" type="text" />
+                  </div>
+                </div>
+
               </div>
               <button type="submit" class="btn btn-secondary">Create</button>
             </form>

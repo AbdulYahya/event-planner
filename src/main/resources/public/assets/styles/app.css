@@ -73,7 +73,7 @@ h4 {
 
 @media (min-width: 48em) {
   .container {
-    max-width: 50rem;
+    max-width: 65rem;
   }
   .order-pg {
     max-width: 60rem;
