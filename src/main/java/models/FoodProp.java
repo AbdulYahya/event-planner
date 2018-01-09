@@ -5,6 +5,7 @@ import java.util.List;
 
 public class FoodProp implements EventProps {
     private List<String> mArrayListSelection;
+    private String eachEntree;
     private int mQuantity;
 
     public FoodProp(int quantity, List<String> arrayListSelection) {
@@ -24,6 +25,13 @@ public class FoodProp implements EventProps {
         return mQuantity;
     }
 
+//    public String getEachEntree(List<String> arrayListSelection) {
+//
+//        for (String entree : arrayListSelection) {
+//            return entree;
+//        }
+//        return eachEntree;
+//    }
     public List<String> getArrayListSelection() {
         return mArrayListSelection;
     }

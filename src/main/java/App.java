@@ -8,9 +8,7 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static  spark.Spark.*;
 
@@ -36,25 +34,22 @@ public class App {
             String gQuantity = request.queryParams("gQuantity");
             String eventType = request.queryParams("eventType");
             String eDate = request.queryParams("eDate");
-            String eventPropEntrees = request.queryParams("eventPropEntrees");
-            String[] arrayEventPropEntrees = eventPropEntrees.split(", ");
+            String eventPropFood = request.queryParams("eventPropEntrees");
+            List<String> arrayEventPropFood = new ArrayList<>();
 
-            // Testing
-            for (String word : arrayEventPropEntrees) {
-                System.out.print(word + " ");
+
+            for (String word : eventPropFood.split(", ")) {
+                arrayEventPropFood.add(word);
             }
-            System.out.println("\n" + arrayEventPropEntrees.length);
-//            Date eventDate;
-//            DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
-//            eventDate = df.parse(eDate);
-//            SimpleDateFormat ft = new SimpleDateFormat("E, MMMM d");
 
+            FoodProp foodProp = new FoodProp(arrayEventPropFood.size(), arrayEventPropFood);
 
 
             model.put("fName", fName);
             model.put("eDate", eDate);
             model.put("gQuantity", gQuantity);
             model.put("eventType", eventType);
+            model.put("eventPropFood", arrayEventPropFood);
             return new ModelAndView(model, "event-confirmation.hbs");
         }, new HandlebarsTemplateEngine());
 
