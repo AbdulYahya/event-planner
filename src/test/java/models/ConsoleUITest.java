@@ -45,7 +45,7 @@ public class ConsoleUITest {
                 "1) Wedding\n" +
                 "2) Birthday\n" +
                 "3) Reunion\n" +
-                "4) Other\n" +
+                "4) Custom\n" +
                 "5) Quit\n";
 
         testConsole.startMenuPrompt();
@@ -57,7 +57,17 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "Hip hip hoooray! Congratulations to the newly wed!\n";
+        String expected = "--------------------------------------------------------------\n" +
+                "Hip hip hoooray! Congratulations to the newly wed!\n" +
+                "Sorry! This service is coming soon! Please try again tomorrow.\n" +
+                "--------------------------------------------------------------\n" +
+                "\nWelcome to Abdul's Event planner! What would you like to plan?\n" +
+                "--------------------------------------------------------------\n" +
+                "1) Wedding\n" +
+                "2) Birthday\n" +
+                "3) Reunion\n" +
+                "4) Custom\n" +
+                "5) Quit\n";;;
 
         testConsole.weddingPrompt();
         assertEquals(expected, outContent.toString());
@@ -68,7 +78,17 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "Happy birthday to the intended recipient of this event!\n";
+        String expected = "--------------------------------------------------------------\n" +
+                "Happy birthday to the intended recipient of this event!\n" +
+                "Sorry! This service is coming soon! Please try again tomorrow.\n" +
+                "--------------------------------------------------------------\n" +
+                "\nWelcome to Abdul's Event planner! What would you like to plan?\n" +
+                "--------------------------------------------------------------\n" +
+                "1) Wedding\n" +
+                "2) Birthday\n" +
+                "3) Reunion\n" +
+                "4) Custom\n" +
+                "5) Quit\n";
 
         testConsole.birthdayPrompt();
         assertEquals(expected, outContent.toString());
@@ -79,7 +99,17 @@ public class ConsoleUITest {
         ConsoleUI testConsole = new ConsoleUI();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        String expected = "We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!\n";
+        String expected = "--------------------------------------------------------------\n" +
+                "We at Abdul's Event planner would like to help you plan the best reunion the earth has ever witnessed!\n" +
+                "Sorry! This service is coming soon! Please try again tomorrow.\n" +
+                "--------------------------------------------------------------\n" +
+                "\nWelcome to Abdul's Event planner! What would you like to plan?\n" +
+                "--------------------------------------------------------------\n" +
+                "1) Wedding\n" +
+                "2) Birthday\n" +
+                "3) Reunion\n" +
+                "4) Custom\n" +
+                "5) Quit\n";;
 
         testConsole.reunionPrompt();
         assertEquals(expected, outContent.toString());
